@@ -1,0 +1,10 @@
+var oUl=document.getElementsByClassName('mun-box')[0];
+
+function{
+   var str='';
+   for(var=1;i<=12;i++){
+       str += '<li style="transform: rotate('+i*30+'deg')" class=num><span style="transform:rotate('+i*30+'deg)">'+i+'</span>
+   }
+  oUl.innerHTML=str;
+}
+init();

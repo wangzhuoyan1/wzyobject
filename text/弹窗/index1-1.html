@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)file:///C:/Users/wangzhuoyan/Desktop/javasprict/%E5%BC%B9%E7%AA%97/index1-1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+body{
+    height: 750px;
+    margin: 0;
+    padding: 0;
+}
+.ad{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 225px;
+    height: 0px;
+    border: 2px solid black;
+}
+.bg{
+    width: 225px;
+}
+.btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    
+    <!--<iframe src="file:///C:/Users/wangzhuoyan/Desktop/javasprict/%E5%B0%8F%E7%B1%B3%E9%97%AA%E8%B4%AD/index1.html" frameborder="0" width="100%" height="100%"></iframe>-->
+    <iframe src="./index1-1_files/saved_resource.html" frameborder="0" width="100%" height="100%"></iframe>
+    <div id="myAD" class="ad">
+<img id="myClose" class="btn" src="file:///C:/Users/wangzhuoyan/Desktop/javasprict/%E5%BC%B9%E7%AA%97/close.jpg" alt="">
+<a href="file:///C:/Users/wangzhuoyan/Desktop/javasprict/%E5%BC%B9%E7%AA%97/index1-1.html#"></a><img class="bg" src="file:///C:/Users/wangzhuoyan/Desktop/javasprict/%E5%BC%B9%E7%AA%97/timg.jpg" alt="">
+   </div>
+
+
+
+    <script>
+var myAD=document.getElementById("myAD");
+var myClose=document.getElementById("myClose");
+var adHeight=0;
+myClose.onclick=function(){
+    myAD.style.display="none";
+}
+//var show=setInterval(adShowFunc,5);
+function adShowFunc(){
+    if(adHeight<225){
+        adHeight +=5;
+    myAD.style.height=adHeight+"px";
+    }else{
+        myAD.style.height="165px";
+        adHeight=125;
+        clearInterval(show);
+    }
+  } 
+  window.onload=function(){
+       show=setInterval(adShowFunc,3);
+   
+}
+
+
+
+
+
+
+
+    </script>
+</body></html>

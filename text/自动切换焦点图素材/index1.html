@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .clearfix::after{
+        content: " ";
+        display: table;
+        clear: both;
+    }    
+    #left{
+        width: 140px;
+        float: left;
+    }
+    #left img{
+        width: 140px;
+    }
+    #right{
+        width: 44px;
+        margin-left: 10px;
+        float: left;
+    }
+    #right img{
+        width: 440px;
+        display: none;
+    }
+    #right .show{
+        display: inline-block;
+    }
+    #pointer{
+        margin-top: 4px;
+        position: absolute;
+        top: 0px;
+        left: 0;
+    }
+    .show{
+        display: inline-block;
+    }
+    .box{
+        position: relative;
+    }
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+        <div id="left">
+            <img src="C:\Users\wangzhuoyan\Desktop\javasprict\自动切换焦点图素材\tab切换焦点图效果\1.jpg" alt="" >
+            <img src="C:\Users\wangzhuoyan\Desktop\javasprict\自动切换焦点图素材\tab切换焦点图效果\2.jpg" alt="">
+            <img src="C:\Users\wangzhuoyan\Desktop\javasprict\自动切换焦点图素材\tab切换焦点图效果\3.jpg" alt="">
+        </div>
+        <img src="C:\Users\wangzhuoyan\Desktop\javasprict\自动切换焦点图素材\tab切换焦点图效果\pointer.png" alt="" id="pointer">
+        <div id="right">
+            <img src="C:\Users\wangzhuoyan\Desktop\javasprict\自动切换焦点图素材\tab切换焦点图效果\1.jpg" alt="" class="show">
+            <img src="C:\Users\wangzhuoyan\Desktop\javasprict\自动切换焦点图素材\tab切换焦点图效果\2.jpg" alt="">
+            <img src="C:\Users\wangzhuoyan\Desktop\javasprict\自动切换焦点图素材\tab切换焦点图效果\3.jpg" alt="">
+        </div>
+    </div>
+    <script>
+    var leftImgAry=document.getElementById("left").getElementsByTagName("img");
+    var rightImgAry=document.getElementById("right").getElementsByTagName("img");
+    var pointer=document.getElementById("pointer");
+    var TopAry=[0,84,164];
+    for(var i=0;i<leftImgAry.length;i++){
+        leftImgAry[i].onmouseover=mouseOver;
+        leftImgAry[i].index=i;
+    }
+    function mouseOver(){
+        console.log(this.index);
+        for(var i =0; i<rightImgAry.length; i++){
+            if( i == this.index){
+            rightImgAry[i].className="show";
+            Top=TopAry[i];
+            nowTop=pointer.offsetTop;
+            if(moveLoop==null){
+                moveLoop=setInterval(moveTo,10);
+            }
+            
+        }
+        else rightImgAry[i].className= "";
+        }
+    }
+    var moveLoop=null;//setInterval(  moveTo,10);
+    var Top=164;
+    var nowTop=0;
+    var speed=4;
+    function moveTo(){
+        if(nowTop < Top){
+            nowTop += speed;
+            if(nowTop>=Top){
+                nowTop=Top;
+                clearInterval(moveLoop);
+                moveLoop=null;
+            }
+            
+        }
+        if(nowTop > Top){
+            nowTop -= speed;
+            if(nowTop <= Top){
+                nowTop = Top;
+                clearInterval(moveLoop);
+                moveLoop=null;
+            }
+            
+        }
+        if(nowTop==Top){
+      clearInterval(moveLoop);
+    
+      }
+    pointer.style.top= nowTop + "px";
+    }
+    
+    </script>
+</body>
+</html>
