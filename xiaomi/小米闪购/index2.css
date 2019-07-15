@@ -1,0 +1,345 @@
+body , ul ,li{
+margin: 0;
+
+padding: 0;
+
+} 
+body{
+    height: 2500px;
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.topbar {
+    background-color: #333;
+    /*border: 1px solid black;*/
+height: 40px;
+}
+.container {
+    /*border: 1px solid black;*/
+    margin:0 auto;
+    width:1226px;
+}
+.topbar a{
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.topbar a:hover{
+    color: #fff;
+}
+.container::before , .container::after{}
+.clearfix::before, .clearfix::after{
+content: "";
+display: table;
+}
+.clearfix::before, .clearfix::after{
+    clear: both;
+}
+.container::after .clearfix::after
+{
+    clear: both;
+}
+.topbar-nav{
+float: left;
+height: 40px;
+line-height: 40px;
+font-size: 0;
+}
+.topbar-nav span{
+    font-size: 12px;
+    color: #424242;
+    font-family: sans-serif;
+    margin: 0.5em;
+}
+.topbar-onfo{
+float: right;
+}
+.topbar-cart{
+float: right;
+}
+.topbar-cart a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 120px;
+    background-color: #424242;
+}
+.topbar-cart a:hover{
+    background-color:#fff;
+    color:  #ff6700;
+}
+.topbar-cart span{
+    margin-left: -4px;
+font-size: 12px;
+}
+.topbar-onfo{
+    margin-right:15px; 
+}
+.topbar-onfo a{
+    float: left;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 5px;
+}
+.topbar-onfo span{
+    float: left;
+    font-family: sans-serif;
+    font-size:12px;
+    color: #424242;
+    line-height: 40px;
+    height: 40px;
+}
+.topbar-onfo .sep{
+padding: 0 10px;
+}
+.header{
+    height: 100px;
+}
+.header-log{
+    float: left;
+    width: 62px;
+    height: 55px;
+    margin-top: 22px;
+    /*border: 1px solid black;*/
+}
+.header-log a{
+    display: block;
+    height: 55px;
+    width: 55px;
+    background: #ff6700 url(../小米闪购/小米闪购素材/img/mi-logo.png) no-repeat 50% 50%;
+}
+.header-log .lr{
+    text-align: left;
+    text-indent: -9992em;
+}
+.header-nav{
+    float: left;
+    width: 820px;
+    height: 100px;
+    /*border: 1px solid black;*/
+}
+.header-nav .nav-list{
+    width: 820px;
+    height: 88px;
+    font-size: 16px;
+    padding: 12px 0 0 38px;
+}
+.header-nav .nav-list .inav-category{
+    float: left;
+    width: 127px;
+    padding: 0 15px 0 0;
+}
+.header-nav .nav-list .inav-category a{
+    display: block;
+    text-align: right;
+    padding: 26px 15px;
+    color: #333; 
+}
+.header-nav .nav-list .inav-tem{
+    float: left;
+}
+.header-nav .nav-list .inav-tem a {
+    display: block;
+    padding: 26px 10px 38px;
+    color: #333;
+}
+.header-nav .nav-list .inav-tem a:hover{
+    color: #ff6700;
+}
+.header-search{
+    float: right;
+    width: 296px;
+    height: 50px;
+    margin-top: 25px;
+    /*border: 1px solid black;*/
+}
+.header-search .search-form{
+    position: relative;
+display: block;
+width: 296px;
+height: 50px;
+}
+.header-search .search-form .search-text{
+    display: block;
+    position: absolute;
+    top:0;
+    right: 51px; 
+    width: 245px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #e0e0e0
+    outline:0;
+}
+.header-search .search-form .search-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 52px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    font-size: 24px;
+    line-height: 24px;
+    background: #fff;
+    color: #616161;
+    outline: 0;
+    background: url(../小米闪购/小米闪购素材/img/fdj.png) no-repeat 50% 50%;
+}
+.header-search .search-form .search-btn:hover{
+    background-color:#ff6700;
+    color: #fff; 
+}
+.seckill {
+    background-color:#f5f5f5; 
+}
+.seckill-head{
+    margin-top:19px;
+    height: 170px; 
+    background: url(../小米闪购/小米闪购素材/img/seckill-head.jpg) no-repeat 100% 100%;
+}
+.seckill-nav{
+    margin: -68px 0 22px;
+}
+.seckill-nav ul{
+    height: 68px;
+    background: #414141;
+}
+.seckill-nav li{
+    display: block;
+    float: left;
+    margin-left: 
+    color: #fff;
+    width: 20%;
+    height: 68px;
+    text-align: center;
+    line-height: 68px;
+    cursor: pointer;
+}
+.seckill li em{
+    display: inline-block;
+    font-style: 18px;
+    margin-left: 30px;
+    line-height: 1;
+    font-size: 18px;
+    vertical-align: middle;
+}
+.seckill li span{
+    display: inline-block;
+    text-align: left;
+    margin-left: 15px;
+    line-height: 1px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.seckill-nav .active{
+    background-color: #f1393a;
+}
+.seckill-navtop{
+    position: fixed;
+    top: 60px;
+    width: 1280px;
+}
+.seckill-nav ul li span em{
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 0;
+    font-style: normal;
+    text-align: left;
+    line-height: 20px;
+}
+.seckill-goods .active{
+    display: block;
+}
+.seckill-goods ul{
+    display: none;
+    margin-right: -10px;
+    /*border:1PX solid black;*/
+}
+.seckill-goods li{
+    float: left;
+    width: 400px;
+    height: 190px;
+    /*border: 1px solid black;*/
+    margin-right:9px ;
+    margin-bottom: 9px;
+    background-color:#fff; 
+}
+.seckill-goods .bg img{
+    height: 190px;
+}
+.seckill-goods .bg{
+    float: left;
+    width: 190px;
+    height: 190px;
+    /*border: 1px solid red;*/
+}
+.seckill-goods .info{
+    width: 190px;
+    height: 190px;
+    margin-left: 210px;
+    /*border: 1px solid black;*/
+    padding-top: 30px;
+}
+.seckill-goods .info .tips{
+    font-size: 12px;
+    line-height: 12px;
+    /*color: #b000;*/
+    margin-top: 10px;
+}
+.seckill-goods .info .price{
+    font-size: 16px;
+    line-height: 16px;
+    color: #f1393a;
+    margin-top: 14px;
+}
+.seckill-goods .info .price .del{
+    color: #999;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 10px;
+}
+.seckill-goods .info .btn{
+    display: inline-block;
+    width: 118px;
+    height: 28px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 28px;
+    text-align: center;
+    background-color: #f1393a;
+}
+.seckill-goods .info .name{
+    font-size: 16px;
+    color: #333;
+    /*height: 6px;*/
+    line-height: 16px;
+    display: block;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.wenzi{
+    font-size: 12px;
+    color: #999;
+    margin-top: 100px;
+    padding-bottom:35pxw; 
+}
+.seckill-goods .info .tixing{
+    font-size: 12px;
+    line-height: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
