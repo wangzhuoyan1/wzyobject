@@ -1,0 +1,19 @@
+
+
+.wrap{
+     text-align: center;   
+     overflow:hidden;
+}             
+.wrap .wrap-box{
+    width: 31%;
+    /*border: 1px solid black;*/
+    float: left;
+    padding-bottom:31%;
+    background-color: yellow;
+    border-radius: 20%;
+    margin: 1%;
+}
+    
+    
+    
+    
